@@ -2,6 +2,8 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-RYDMIPC7PSSEfT5pnISXVffEPpgGc0WT4C6OeTxTt94='; style-src 'sha256-47LEa+ZmtatkRD6KVvJQpPlY5HzvH/UF7viIxCyWdQI='; img-src 'self' data:; font-src 'self'; manifest-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vezgo — טסט ושטיפת רכב עד הבית</title>
 <meta name="description" content="נהג אוסף את הרכב מהבית, לוקח אותו לטסט או לשטיפה ומחזיר אותו אליך. להורדה ב-App Store וב-Google Play.">
@@ -91,6 +93,7 @@ nav.main a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
 html[lang="ar"] .hero h1{line-height:1.15;font-size:clamp(46px,7vw,92px)}
 html[lang="en"] .hero h1{font-size:clamp(48px,7.4vw,98px)}
 .hero h1 span{display:block;color:var(--signal)}
+.hero h1 span.h1-white{color:#fff}
 .hero .lead{margin-top:26px;font-size:clamp(19px,2.1vw,23px);line-height:1.55;font-weight:600;color:rgba(255,255,255,.9);max-width:34em;text-wrap:pretty}
 .stores{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
 .store{display:inline-flex;align-items:center;gap:12px;background:#0b1f24;color:#fff;text-decoration:none;border-radius:14px;padding:10px 20px 10px 18px;min-width:200px;direction:ltr;border:1px solid rgba(255,255,255,.18);transition:transform .15s,background .15s}
@@ -213,12 +216,13 @@ footer{background:var(--ink);color:rgba(255,255,255,.78);padding:64px 0 34px;fon
 @media (max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
 
 .ltr{direction:ltr;unicode-bidi:isolate}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
 </style>
 </head>
 <body>
 <a class="skip" href="#main" data-t="skip">דילוג לתוכן</a>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<svg class="defs" width="0" height="0" aria-hidden="true">
   <defs>
     <filter id="soft" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="7"/></filter>
     <radialGradient id="glow"><stop offset="0" stop-color="#FFE7A0" stop-opacity=".9"/><stop offset="1" stop-color="#FFC83D" stop-opacity="0"/></radialGradient>
@@ -261,11 +265,11 @@ footer{background:var(--ink);color:rgba(255,255,255,.78);padding:64px 0 34px;fon
   <section class="hero" aria-labelledby="h-hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <h1 id="h-hero"><span data-t="hero_1" style="color:#fff">הטסט השנתי?</span><span data-t="hero_2">עלינו.</span></h1>
+        <h1 id="h-hero"><span data-t="hero_1" class="h1-white">הטסט השנתי?</span><span data-t="hero_2">עלינו.</span></h1>
         <p class="lead" data-t="hero_lead">נהג אוסף את הרכב מהבית, לוקח אותו לטסט או לשטיפה ומחזיר אותו אליך. בלי לקחת חצי יום חופש.</p>
         <div class="stores">
-          <a class="store" data-store="ios" href="https://apps.apple.com/app/id6811210608" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
-          <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+          <a class="store" data-store="ios" href="https://apps.apple.com/app/id6811210608" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
         </div>
         <p class="langs-note" data-t="hero_note">באפליקציה: עברית, ערבית ואנגלית</p>
       </div>
@@ -375,8 +379,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.78);padding:64px 0 34px;fon
         <h2 id="h-dl" data-t="dl_title">הרכב שלך, נאסף ומוחזר.</h2>
         <p class="sec-intro" data-t="dl_intro">מורידים את Vezgo, מוסיפים את הרכב ומזמינים את הטסט או השטיפה הבאים בשתי דקות.</p>
         <div class="stores">
-          <a class="store" data-store="ios" href="https://apps.apple.com/app/id6811210608" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
-          <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+          <a class="store" data-store="ios" href="https://apps.apple.com/app/id6811210608" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
         </div>
       </div>
       <div class="qr"><img src="assets/qr.svg" alt="QR code to download Vezgo" width="176" height="176"><span data-t="qr">סורקים עם המצלמה להורדה</span></div>
@@ -390,13 +394,14 @@ footer{background:var(--ink);color:rgba(255,255,255,.78);padding:64px 0 34px;fon
       <div><img src="assets/wordmark_white.svg" alt="Vezgo" width="80" height="44"><p class="tag" data-t="ft_tag">טסט ושטיפת רכב עם איסוף והחזרה עד הבית, בכל רחבי האזור שבו אנחנו פועלים.</p></div>
       <div><h4 data-t="ft_app">האפליקציה</h4><ul><li><a href="https://apps.apple.com/app/id6811210608" class="ltr">App Store</a></li><li><a href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" class="ltr">Google Play</a></li></ul></div>
       <div><h4 data-t="ft_info">מידע</h4><ul><li><a href="https://legal.vezgo.app/index.html" data-t="ft_privacy">מדיניות פרטיות</a></li><li><a href="https://legal.vezgo.app/terms.html" data-t="ft_terms">תנאי שימוש</a></li></ul></div>
-      <div><h4 data-t="ft_contact">יצירת קשר</h4><ul><li><a href="mailto:vezgov@gmail.com" class="ltr">vezgov@gmail.com</a></li><li><a href="https://instagram.com/vezgo.app" class="ltr" rel="noopener" target="_blank">Instagram @vezgo.app</a></li></ul></div>
+      <div><h4 data-t="ft_contact">יצירת קשר</h4><ul><li><a href="mailto:vezgov@gmail.com" class="ltr">vezgov@gmail.com</a></li><li><a href="https://instagram.com/vezgo.app" class="ltr" rel="noopener noreferrer" target="_blank">Instagram @vezgo.app</a></li></ul></div>
     </div>
     <div class="legal"><span class="ltr">© 2026 Vezgo</span><span data-t="ft_made">נבנה בישראל</span></div>
   </div>
 </footer>
 
 <script>
+if(window.top!==window.self){try{window.top.location=window.location.href}catch(e){document.documentElement.style.display="none"}}
 const T={
 he:{dir:"rtl",title:"Vezgo — טסט ושטיפת רכב עד הבית",skip:"דילוג לתוכן",nav_services:"שירותים",nav_how:"איך זה עובד",nav_faq:"שאלות",nav_get:"הורדת האפליקציה",
 hero_1:"הטסט השנתי?",hero_2:"עלינו.",hero_lead:"נהג אוסף את הרכב מהבית, לוקח אותו לטסט או לשטיפה ומחזיר אותו אליך. בלי לקחת חצי יום חופש.",hero_note:"באפליקציה: עברית, ערבית ואנגלית",hero_img_alt:"מסך הבית של אפליקציית Vezgo",
