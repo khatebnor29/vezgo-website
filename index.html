@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vezgo — טסט ושטיפת רכב עד הבית</title>
+<meta name="description" content="נהג אוסף את הרכב מהבית, לוקח אותו לטסט או לשטיפה ומחזיר אותו אליך. להורדה ב-App Store וב-Google Play.">
+<meta name="theme-color" content="#46909E">
+<meta name="apple-itunes-app" content="app-id=6811210608">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vezgo — טסט ושטיפת רכב עד הבית">
+<meta property="og:description" content="נהג אוסף את הרכב מהבית, לוקח אותו לטסט או לשטיפה ומחזיר אותו אליך.">
+<meta property="og:image" content="https://vezgo.app/assets/og.jpg">
+<meta property="og:url" content="https://vezgo.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://vezgo.app/">
+<link rel="alternate" hreflang="he" href="https://vezgo.app/">
+<link rel="alternate" hreflang="ar" href="https://vezgo.app/?lang=ar">
+<link rel="alternate" hreflang="en" href="https://vezgo.app/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://vezgo.app/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","name":"Vezgo","url":"https://vezgo.app/","logo":"https://vezgo.app/assets/icon-512.png","email":"vezgov@gmail.com","sameAs":["https://instagram.com/vezgo.app"]},
+ {"@type":"MobileApplication","name":"Vezgo","operatingSystem":"iOS, Android","applicationCategory":"LifestyleApplication","inLanguage":["he","ar","en"],
+  "description":"Annual vehicle test and car wash with pickup and return to your door, in Israel.",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"ILS"},
+  "downloadUrl":["https://apps.apple.com/app/id6811210608","https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il"]}
+]}
+</script>
+<style>
+@font-face{font-family:"Secular One";font-display:swap;src:url(fonts/secular-one-hebrew-400-normal.woff2) format("woff2");unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Secular One";font-display:swap;src:url(fonts/secular-one-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2019}
+@font-face{font-family:"Assistant";font-weight:400;font-display:swap;src:url(fonts/assistant-hebrew-400-normal.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:"Assistant";font-weight:600;font-display:swap;src:url(fonts/assistant-hebrew-600-normal.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:"Assistant";font-weight:700;font-display:swap;src:url(fonts/assistant-hebrew-700-normal.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:"Assistant";font-weight:800;font-display:swap;src:url(fonts/assistant-hebrew-800-normal.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:"Assistant";font-weight:400;font-display:swap;src:url(fonts/assistant-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2019,U+20AA}
+@font-face{font-family:"Assistant";font-weight:600;font-display:swap;src:url(fonts/assistant-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2019,U+20AA}
+@font-face{font-family:"Assistant";font-weight:700;font-display:swap;src:url(fonts/assistant-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2019,U+20AA}
+@font-face{font-family:"Assistant";font-weight:800;font-display:swap;src:url(fonts/assistant-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2014,U+2019,U+20AA}
+@font-face{font-family:"Readex Pro";font-weight:400;font-display:swap;src:url(fonts/readex-pro-arabic-400-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:"Readex Pro";font-weight:600;font-display:swap;src:url(fonts/readex-pro-arabic-600-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:"Readex Pro";font-weight:700;font-display:swap;src:url(fonts/readex-pro-arabic-700-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:"Readex Pro";font-weight:400;font-display:swap;src:url(fonts/readex-pro-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF}
+@font-face{font-family:"Readex Pro";font-weight:600;font-display:swap;src:url(fonts/readex-pro-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF}
+@font-face{font-family:"Readex Pro";font-weight:700;font-display:swap;src:url(fonts/readex-pro-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF}
+
+:root{
+  --teal:#46909E; --teal-hi:#55A2B0; --teal-lo:#3B7D8A;
+  --road:#1E4C56; --deep:#18414A; --ink:#13343B;
+  --mist:#EEF5F6; --line:#D5E6E9; --signal:#FFC83D; --white:#fff;
+  --body:"Assistant",system-ui,sans-serif; --display:"Secular One","Assistant",sans-serif;
+  --wrap:1180px; --pad:clamp(20px,5vw,48px);
+}
+html[lang="ar"]{--body:"Readex Pro",system-ui,sans-serif;--display:"Readex Pro",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--body);color:var(--ink);background:var(--white);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{font-weight:700;letter-spacing:0}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;inset-inline-start:-9999px;top:8px;background:var(--signal);color:var(--ink);padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{inset-inline-start:8px}
+
+/* ---------- header ---------- */
+header.top{position:sticky;top:0;z-index:50;background:rgba(70,144,158,.94);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);transition:box-shadow .2s}
+header.top.scrolled{box-shadow:0 6px 24px rgba(10,40,46,.18)}
+.bar{display:flex;align-items:center;gap:28px;height:72px}
+.logo img{height:40px;width:auto}
+nav.main{display:flex;gap:26px;margin-inline-start:auto}
+nav.main a{color:#fff;text-decoration:none;font-weight:600;font-size:17px;opacity:.9}
+nav.main a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.lang{display:flex;border:1.5px solid rgba(255,255,255,.45);border-radius:999px;padding:3px}
+.lang button{font:inherit;font-size:14px;font-weight:700;color:#fff;background:none;border:0;padding:4px 10px;border-radius:999px;cursor:pointer;line-height:1.2}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--teal-lo)}
+.btn-get{background:var(--signal);color:var(--ink);text-decoration:none;font-weight:800;font-size:16px;padding:10px 18px;border-radius:12px;white-space:nowrap}
+.btn-get:hover{background:#ffd566}
+@media (max-width:860px){nav.main{display:none}.lang{margin-inline-start:auto}.bar{gap:14px}.btn-get{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow-x:clip;overflow-y:visible;color:#fff;
+  background:linear-gradient(225deg,var(--teal-hi) 0%,var(--teal) 48%,var(--teal-lo) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 80% 10%,rgba(255,255,255,.12),transparent 60%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end;padding-top:clamp(40px,7vw,90px)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(50px,7.6vw,104px);line-height:.98;letter-spacing:-.5px;text-shadow:0 6px 30px rgba(10,40,46,.15)}
+html[lang="ar"] .hero h1{line-height:1.15;font-size:clamp(46px,7vw,92px)}
+html[lang="en"] .hero h1{font-size:clamp(48px,7.4vw,98px)}
+.hero h1 span{display:block;color:var(--signal)}
+.hero .lead{margin-top:26px;font-size:clamp(19px,2.1vw,23px);line-height:1.55;font-weight:600;color:rgba(255,255,255,.9);max-width:34em;text-wrap:pretty}
+.stores{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.store{display:inline-flex;align-items:center;gap:12px;background:#0b1f24;color:#fff;text-decoration:none;border-radius:14px;padding:10px 20px 10px 18px;min-width:200px;direction:ltr;border:1px solid rgba(255,255,255,.18);transition:transform .15s,background .15s}
+.store:hover{background:#000;transform:translateY(-2px)}
+.store svg{width:28px;height:28px;flex:none}
+.store small{display:block;font-family:"Assistant",sans-serif;font-size:12px;font-weight:600;opacity:.8;line-height:1.1}
+.store b{display:block;font-family:"Assistant",sans-serif;font-size:21px;font-weight:700;line-height:1.1;letter-spacing:.1px}
+.langs-note{margin-top:18px;font-size:15px;color:rgba(255,255,255,.75);font-weight:600}
+.hero-copy{padding-bottom:clamp(150px,15vw,190px)}
+
+.phone{position:relative;justify-self:center;width:min(340px,80vw);aspect-ratio:1320/2868;border-radius:46px;background:#0b1f24;padding:11px;
+  box-shadow:0 40px 80px -20px rgba(8,30,35,.55),0 0 0 1.5px rgba(255,255,255,.18) inset;margin-bottom:-110px;z-index:2}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:36px;background:#f6f8f9}
+.phone::after{content:"";position:absolute;top:22px;left:50%;transform:translateX(-50%);width:96px;height:28px;border-radius:20px;background:#0b1f24}
+
+.road{position:absolute;left:0;right:0;bottom:0;height:120px;background:var(--road);z-index:1}
+.road::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:rgba(255,255,255,.16)}
+.road::after{content:"";position:absolute;left:0;right:0;top:57px;height:6px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0 46px,transparent 46px 92px)}
+.hero-car{position:absolute;bottom:40px;width:230px;z-index:3;left:0;animation:drive 14s linear infinite;will-change:transform}
+html[dir="rtl"] .hero-car{animation-name:drive-rtl}
+.hero-car svg{width:100%;height:auto;overflow:visible}
+html[dir="rtl"] .hero-car svg{transform:scaleX(-1)}
+@keyframes drive{from{transform:translateX(-260px)}to{transform:translateX(calc(100vw + 40px))}}
+@keyframes drive-rtl{from{transform:translateX(calc(100vw + 40px))}to{transform:translateX(-260px)}}
+.wheel{animation:spin .5s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+  .hero-copy{padding-bottom:10px}
+  .phone{width:min(270px,70vw);margin-bottom:-80px}
+  .hero{padding-bottom:0}
+}
+
+/* ---------- sections ---------- */
+section{scroll-margin-top:80px}
+.sec{padding:clamp(80px,10vw,130px) 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(38px,5vw,62px);line-height:1.05;letter-spacing:-.3px;text-wrap:balance}
+.sec-intro{margin-top:16px;font-size:20px;color:#40616a;max-width:36em;text-wrap:pretty}
+
+/* services */
+#services{padding-top:clamp(150px,14vw,190px)}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px}
+.svc article{position:relative;border-radius:28px;padding:40px 40px 0;overflow:hidden;min-height:440px;display:flex;flex-direction:column}
+.svc article:nth-child(1){background:var(--mist)}
+.svc article:nth-child(2){background:var(--ink);color:#fff}
+.svc h3{font-family:var(--display);font-weight:400;font-size:clamp(32px,3.4vw,42px);line-height:1.1}
+.svc p{margin-top:14px;font-size:19px;max-width:24em}
+.svc article:nth-child(2) p{color:rgba(255,255,255,.82)}
+.svc .art{margin-top:auto;padding-top:28px}
+.svc .art svg{width:100%;height:auto;display:block}
+@media (max-width:860px){.svc{grid-template-columns:1fr}.svc article{min-height:0;padding:30px 26px 0}}
+
+/* how it works */
+#how{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+#how .sec-intro{color:rgba(255,255,255,.75)}
+.track{position:relative;margin-top:64px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;z-index:2}
+.steps li{position:relative;padding-top:160px}
+.pin{position:absolute;top:0;inset-inline-start:0;width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.25);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:30px;transition:background .3s,color .3s,border-color .3s,transform .3s}
+.steps li.on .pin{background:var(--signal);border-color:var(--signal);color:var(--ink);transform:scale(1.06)}
+.steps h3{font-size:24px;font-weight:800;line-height:1.2}
+html[lang="ar"] .steps h3{font-size:22px}
+.steps p{margin-top:8px;color:rgba(255,255,255,.75);font-size:17px;line-height:1.55}
+.lane{position:absolute;top:92px;left:0;right:0;height:46px;background:var(--road);border-radius:23px;z-index:1}
+.lane::after{content:"";position:absolute;left:24px;right:24px;top:21px;height:4px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.45) 0 30px,transparent 30px 60px)}
+.lane-car{position:absolute;top:58px;width:120px;z-index:3;left:0;transition:transform .12s linear}
+.lane-car svg{width:100%;height:auto;overflow:visible}
+html[dir="rtl"] .lane-car svg{transform:scaleX(-1)}
+@media (max-width:860px){
+  .steps{grid-template-columns:1fr;gap:0}
+  .steps li{padding:0 0 40px;padding-inline-start:92px;min-height:110px}
+  .lane{top:0;bottom:30px;left:auto;right:auto;inset-inline-start:22px;width:20px;height:auto;border-radius:10px}
+  .lane::after{left:8px;right:auto;top:16px;bottom:16px;width:4px;height:auto;background:repeating-linear-gradient(180deg,rgba(255,255,255,.45) 0 22px,transparent 22px 44px)}
+  .lane-car{display:none}
+  .pin{width:60px;height:60px;inset-inline-start:2px;font-size:28px}
+}
+
+/* features */
+.feat{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,90px);align-items:start}
+.feat dl{display:grid;grid-template-columns:1fr 1fr;gap:38px 40px}
+.feat dt{display:flex;align-items:center;gap:14px;font-size:22px;font-weight:800;line-height:1.25}
+.feat dt svg{flex:none;width:44px;height:44px;padding:10px;border-radius:12px;background:var(--mist);color:var(--teal-lo)}
+.feat dd{margin-top:8px;color:#40616a;font-size:18px;padding-inline-start:58px}
+@media (max-width:960px){.feat{grid-template-columns:1fr}}
+@media (max-width:620px){.feat dl{grid-template-columns:1fr;gap:28px}}
+
+/* faq */
+#faq{background:var(--mist)}
+.faq{margin-top:44px;max-width:880px;border-top:1.5px solid var(--line)}
+.faq details{border-bottom:1.5px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;font-size:21px;font-weight:800}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;border-right:3px solid var(--teal-lo);border-bottom:3px solid var(--teal-lo);transform:rotate(45deg);transition:transform .2s;margin-top:-6px}
+.faq details[open] summary::after{transform:rotate(225deg);margin-top:6px}
+.faq details p{padding:0 4px 26px;color:#40616a;max-width:46em;font-size:18px}
+.faq a{color:var(--teal-lo);font-weight:700}
+
+/* download */
+#download{background:linear-gradient(225deg,var(--teal-hi),var(--teal) 50%,var(--teal-lo));color:#fff;overflow:hidden;position:relative}
+.dl{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center}
+#download h2{font-size:clamp(42px,6vw,76px)}
+#download .sec-intro{color:rgba(255,255,255,.88)}
+.qr{background:#fff;border-radius:24px;padding:22px;text-align:center;color:var(--ink);width:220px}
+.qr img{width:176px;height:176px}
+.qr span{display:block;margin-top:12px;font-weight:800;font-size:16px}
+@media (max-width:860px){.dl{grid-template-columns:1fr}.qr{display:none}}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.78);padding:64px 0 34px;font-size:16px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.foot img{height:44px;width:auto}
+.foot p.tag{margin-top:14px;max-width:22em}
+.foot h4{color:#fff;font-size:16px;font-weight:800;margin-bottom:12px}
+.foot ul{list-style:none;display:grid;gap:8px}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.legal{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:rgba(255,255,255,.55)}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+
+.ltr{direction:ltr;unicode-bidi:isolate}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">דילוג לתוכן</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="soft" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="7"/></filter>
+    <radialGradient id="glow"><stop offset="0" stop-color="#FFE7A0" stop-opacity=".9"/><stop offset="1" stop-color="#FFC83D" stop-opacity="0"/></radialGradient>
+    <symbol id="car" viewBox="-20 -140 340 160">
+      <ellipse cx="141" cy="6" rx="150" ry="12" fill="#08262c" opacity=".5" filter="url(#soft)"/>
+      <ellipse cx="300" cy="-60" rx="60" ry="22" fill="url(#glow)" opacity=".55"/>
+      <path d="M18 -50 Q18 -78 46 -80 L86 -82 Q112 -124 160 -126 Q206 -127 228 -84 L252 -80 Q274 -76 274 -52 L274 -34 Q274 -22 262 -22 L18 -22 Q8 -22 8 -34 Z" fill="#fff"/>
+      <path d="M102 -84 Q122 -114 158 -115 L158 -84 Z" fill="#3B7D8A"/>
+      <path d="M170 -115 Q200 -114 216 -84 L170 -84 Z" fill="#3B7D8A"/>
+      <rect x="262" y="-66" width="16" height="12" rx="6" fill="#FFC83D"/>
+      <rect x="4" y="-66" width="14" height="12" rx="6" fill="#F05A4A"/>
+      <path d="M150 -60 H176" stroke="#3B7D8A" stroke-width="5" stroke-linecap="round"/>
+      <g class="wheel"><circle cx="70" cy="-20" r="30" fill="#13343B"/><circle cx="70" cy="-20" r="12" fill="#fff"/><path d="M70 -42 V-34 M70 -6 V2 M48 -20 H56 M84 -20 H92" stroke="#fff" stroke-width="4"/></g>
+      <g class="wheel"><circle cx="222" cy="-20" r="30" fill="#13343B"/><circle cx="222" cy="-20" r="12" fill="#fff"/><path d="M222 -42 V-34 M222 -6 V2 M200 -20 H208 M236 -20 H244" stroke="#fff" stroke-width="4"/></g>
+    </symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.37 12.7c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5zM14.2 6.25c.6-.73 1-1.74.9-2.75-.86.04-1.91.58-2.53 1.3-.55.64-1.04 1.67-.91 2.66.96.07 1.94-.49 2.54-1.21z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="#34A853" d="M3.6 2.2 13.4 12l-9.8 9.8c-.36-.2-.6-.6-.6-1.07V3.27c0-.47.24-.87.6-1.07z"/><path fill="#FBBC04" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.72 2.14c1.06.6 1.06 1.73 0 2.33z"/><path fill="#EA4335" d="M16.7 15.3 13.4 12l-9.8 9.8c.37.2.83.2 1.27-.05z"/><path fill="#4285F4" d="M16.7 8.7 4.87 2.25c-.44-.25-.9-.25-1.27-.05L13.4 12z"/></symbol>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="logo" href="#main" aria-label="Vezgo"><img src="assets/wordmark_white.svg" alt="Vezgo" width="73" height="40"></a>
+    <nav class="main" aria-label="Main">
+      <a href="#services" data-t="nav_services">שירותים</a>
+      <a href="#how" data-t="nav_how">איך זה עובד</a>
+      <a href="#faq" data-t="nav_faq">שאלות</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="he" aria-pressed="true">עב</button>
+      <button type="button" data-lang="ar" aria-pressed="false">ع</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn-get" href="#download" data-t="nav_get">הורדת האפליקציה</a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 id="h-hero"><span data-t="hero_1" style="color:#fff">הטסט השנתי?</span><span data-t="hero_2">עלינו.</span></h1>
+        <p class="lead" data-t="hero_lead">נהג אוסף את הרכב מהבית, לוקח אותו לטסט או לשטיפה ומחזיר אותו אליך. בלי לקחת חצי יום חופש.</p>
+        <div class="stores">
+          <a class="store" data-store="ios" href="https://apps.apple.com/app/id6811210608" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+        </div>
+        <p class="langs-note" data-t="hero_note">באפליקציה: עברית, ערבית ואנגלית</p>
+      </div>
+      <div class="phone"><img src="assets/app-home-880.webp" srcset="assets/app-home-440.webp 440w, assets/app-home-880.webp 880w" sizes="(max-width:860px) 270px, 340px" alt="מסך הבית של אפליקציית Vezgo" data-t-alt="hero_img_alt" width="440" height="956"></div>
+    </div>
+    <div class="road" aria-hidden="true"></div>
+    <div class="hero-car" aria-hidden="true"><svg viewBox="0 0 340 160"><use href="#car" width="340" height="160"/></svg></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="sec" aria-labelledby="h-svc">
+    <div class="wrap">
+      <h2 id="h-svc" data-t="svc_title">מה אפשר להזמין</h2>
+      <p class="sec-intro" data-t="svc_intro">שני שירותים, אותו דבר פשוט: אנחנו באים לקחת את הרכב, ואתה לא זז מהבית.</p>
+      <div class="svc">
+        <article>
+          <h3 data-t="svc_test_t">טסט שנתי</h3>
+          <p data-t="svc_test_p">הנהג לוקח את הרכב לתחנת הטסט בשעה שבחרת, ומחזיר אותו אליך כשהטסט מאחוריך.</p>
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 520 220">
+              <rect x="0" y="176" width="520" height="44" fill="#1E4C56"/>
+              <path d="M0 197 H520" stroke="rgba(255,255,255,.5)" stroke-width="4" stroke-dasharray="26 26"/>
+              <g transform="translate(40,58)" fill="none" stroke="#3B7D8A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+                <path d="M0 118 V34 H170 V118"/><path d="M-14 34 H184 L170 0 H0 Z" fill="#D5E6E9"/>
+                <rect x="48" y="62" width="74" height="56" fill="#fff"/><path d="M48 80 H122 M48 98 H122" stroke-width="3"/>
+              </g>
+              <g transform="translate(400,72) rotate(-10)"><circle r="54" fill="#FFC83D"/><circle r="44" fill="none" stroke="#13343B" stroke-width="3" stroke-dasharray="5 7"/><path d="M-22 -4 l14 14 l30 -32" fill="none" stroke="#13343B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+              <svg x="236" y="132" width="150" height="72" viewBox="0 0 340 160"><use href="#car" width="340" height="160"/></svg>
+            </svg>
+          </div>
+        </article>
+        <article>
+          <h3 data-t="svc_wash_t">שטיפת רכב</h3>
+          <p data-t="svc_wash_p">שטיפה מבפנים ומבחוץ, עם אותו איסוף והחזרה עד הבית. הרכב חוזר אליך נקי.</p>
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 520 220">
+              <rect x="0" y="176" width="520" height="44" fill="#1E4C56"/>
+              <path d="M0 197 H520" stroke="rgba(255,255,255,.4)" stroke-width="4" stroke-dasharray="26 26"/>
+              <g fill="rgba(255,255,255,.14)" stroke="#fff" stroke-width="3">
+                <circle cx="150" cy="70" r="22"/><circle cx="196" cy="40" r="14"/><circle cx="240" cy="64" r="26"/><circle cx="292" cy="34" r="12"/><circle cx="330" cy="72" r="18"/><circle cx="118" cy="30" r="10"/><circle cx="372" cy="40" r="10"/>
+              </g>
+              <svg x="150" y="110" width="200" height="96" viewBox="0 0 340 160"><use href="#car" width="340" height="160"/></svg>
+              <path transform="translate(410,110) scale(5)" d="M0 -1 C3 -3 3 -3 1 0 C3 3 3 3 0 1 C-3 3 -3 3 -1 0 C-3 -3 -3 -3 0 -1Z" fill="#FFC83D"/>
+              <path transform="translate(440,70) scale(3)" d="M0 -1 C3 -3 3 -3 1 0 C3 3 3 3 0 1 C-3 3 -3 3 -1 0 C-3 -3 -3 -3 0 -1Z" fill="#FFC83D"/>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="sec" aria-labelledby="h-how">
+    <div class="wrap">
+      <h2 id="h-how" data-t="how_title">ארבעה צעדים, אפס תורים</h2>
+      <p class="sec-intro" data-t="how_intro">מההזמנה ועד שהמפתחות חוזרים אליך, הכול בתוך האפליקציה.</p>
+      <div class="track">
+        <div class="lane" aria-hidden="true"></div>
+        <div class="lane-car" aria-hidden="true"><svg viewBox="0 0 340 160"><use href="#car" width="340" height="160"/></svg></div>
+        <ol class="steps">
+          <li><span class="pin" aria-hidden="true">1</span><h3 data-t="s1_t">מוסיפים את הרכב</h3><p data-t="s1_p">יצרן, דגם, שנה ומספר רישוי. פעם אחת, וזהו.</p></li>
+          <li><span class="pin" aria-hidden="true">2</span><h3 data-t="s2_t">בוחרים שירות ושעה</h3><p data-t="s2_p">ומסמנים על המפה בדיוק לאן הנהג יגיע.</p></li>
+          <li><span class="pin" aria-hidden="true">3</span><h3 data-t="s3_t">הנהג אוסף את הרכב</h3><p data-t="s3_p">ואתה רואה כל שלב: בדרך, נאסף, בתחנה, בדרך חזרה.</p></li>
+          <li><span class="pin" aria-hidden="true">4</span><h3 data-t="s4_t">הרכב חוזר אליך</h3><p data-t="s4_p">משלמים באפליקציה ומקבלים קבלה למייל.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="sec" aria-labelledby="h-feat">
+    <div class="wrap feat">
+      <div>
+        <h2 id="h-feat" data-t="feat_title">אתה יודע בדיוק איפה הרכב שלך</h2>
+        <p class="sec-intro" data-t="feat_intro">כל הזמנה מראה מה קורה עכשיו, מי הנהג ומה המחיר. בלי לרדוף אחרי אף אחד בטלפון.</p>
+      </div>
+      <dl>
+        <div><dt><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-t="f1_t">סטטוס חי בכל הזמנה</span></dt><dd data-t="f1_p">עם שם הנהג ומספר הטלפון שלו.</dd></div>
+        <div><dt><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span data-t="f2_t">תמונות של הרכב</span></dt><dd data-t="f2_p">לפני האיסוף ושוב אחרי השירות.</dd></div>
+        <div><dt><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12.5l2 2 4-4"/></svg><span data-t="f3_t">צ'אט עם המשרד</span></dt><dd data-t="f3_p">ורואים מתי ההודעה שלך נקראה.</dd></div>
+        <div><dt><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span data-t="f4_t">התראה בכל שלב</span></dt><dd data-t="f4_p">ישר לטלפון, בשפה שלך.</dd></div>
+        <div><dt><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg><span data-t="f5_t">מחיר לפני שמזמינים</span></dt><dd data-t="f5_p">בשקלים, וההנחות מופעלות אוטומטית.</dd></div>
+        <div><dt><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></svg><span data-t="f6_t">קבלה על כל תשלום</span></dt><dd data-t="f6_p">תשלום מאובטח באפליקציה, וקבלה נשלחת למייל.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="sec" aria-labelledby="h-faq">
+    <div class="wrap">
+      <h2 id="h-faq" data-t="faq_title">שאלות נפוצות</h2>
+      <div class="faq">
+        <details><summary data-t="q1">כמה זה עולה?</summary><p data-t="a1">המחיר מופיע באפליקציה לפני שמזמינים, לפי השירות והרכב שלך. מבצעים והנחה אישית מופעלים אוטומטית.</p></details>
+        <details><summary data-t="q2">באילו אזורים אתם עובדים?</summary><p data-t="a2">אנחנו פועלים לפי ערים. כשמסמנים את נקודת האיסוף על המפה, האפליקציה מראה מיד אם היא באזור השירות.</p></details>
+        <details><summary data-t="q3">מה צריך להכין לפני האיסוף?</summary><p data-t="a3">לפני המסירה מאשרים באפליקציה רשימת בדיקה קצרה: מפתחות ודלק. הנהג מצלם את הרכב כשהוא אוסף אותו.</p></details>
+        <details><summary data-t="q4">איך משלמים?</summary><p data-t="a4">בתשלום מאובטח בתוך האפליקציה. על כל תשלום נשלחת אליך קבלה למייל.</p></details>
+        <details><summary data-t="q5">אפשר לעקוב אחרי הרכב?</summary><p data-t="a5">כן. כל שלב מופיע בהזמנה, ומקבלים התראה לטלפון בכל פעם שהסטטוס משתנה.</p></details>
+        <details><summary data-t="q6">מה אם לא יהיה אפשר לאסוף את הרכב?</summary><p data-t="a6" data-html="1">חשוב לסמן נקודת איסוף מדויקת ולהיות זמין בשעה שבחרת. איסוף שלא התאפשר בגלל פרטים שגויים לא מזוכה. כל הפרטים ב<a href="https://legal.vezgo.app/terms.html">תנאי השימוש</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" class="sec" aria-labelledby="h-dl">
+    <div class="wrap dl">
+      <div>
+        <h2 id="h-dl" data-t="dl_title">הרכב שלך, נאסף ומוחזר.</h2>
+        <p class="sec-intro" data-t="dl_intro">מורידים את Vezgo, מוסיפים את הרכב ומזמינים את הטסט או השטיפה הבאים בשתי דקות.</p>
+        <div class="stores">
+          <a class="store" data-store="ios" href="https://apps.apple.com/app/id6811210608" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-apple"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="store" data-store="android" href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" rel="noopener" target="_blank"><svg aria-hidden="true"><use href="#i-play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+        </div>
+      </div>
+      <div class="qr"><img src="assets/qr.svg" alt="QR code to download Vezgo" width="176" height="176"><span data-t="qr">סורקים עם המצלמה להורדה</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="assets/wordmark_white.svg" alt="Vezgo" width="80" height="44"><p class="tag" data-t="ft_tag">טסט ושטיפת רכב עם איסוף והחזרה עד הבית, בכל רחבי האזור שבו אנחנו פועלים.</p></div>
+      <div><h4 data-t="ft_app">האפליקציה</h4><ul><li><a href="https://apps.apple.com/app/id6811210608" class="ltr">App Store</a></li><li><a href="https://play.google.com/store/apps/details?id=com.vehicletest.vehicletset_il" class="ltr">Google Play</a></li></ul></div>
+      <div><h4 data-t="ft_info">מידע</h4><ul><li><a href="https://legal.vezgo.app/index.html" data-t="ft_privacy">מדיניות פרטיות</a></li><li><a href="https://legal.vezgo.app/terms.html" data-t="ft_terms">תנאי שימוש</a></li></ul></div>
+      <div><h4 data-t="ft_contact">יצירת קשר</h4><ul><li><a href="mailto:vezgov@gmail.com" class="ltr">vezgov@gmail.com</a></li><li><a href="https://instagram.com/vezgo.app" class="ltr" rel="noopener" target="_blank">Instagram @vezgo.app</a></li></ul></div>
+    </div>
+    <div class="legal"><span class="ltr">© 2026 Vezgo</span><span data-t="ft_made">נבנה בישראל</span></div>
+  </div>
+</footer>
+
+<script>
+const T={
+he:{dir:"rtl",title:"Vezgo — טסט ושטיפת רכב עד הבית",skip:"דילוג לתוכן",nav_services:"שירותים",nav_how:"איך זה עובד",nav_faq:"שאלות",nav_get:"הורדת האפליקציה",
+hero_1:"הטסט השנתי?",hero_2:"עלינו.",hero_lead:"נהג אוסף את הרכב מהבית, לוקח אותו לטסט או לשטיפה ומחזיר אותו אליך. בלי לקחת חצי יום חופש.",hero_note:"באפליקציה: עברית, ערבית ואנגלית",hero_img_alt:"מסך הבית של אפליקציית Vezgo",
+svc_title:"מה אפשר להזמין",svc_intro:"שני שירותים, אותו דבר פשוט: אנחנו באים לקחת את הרכב, ואתה לא זז מהבית.",
+svc_test_t:"טסט שנתי",svc_test_p:"הנהג לוקח את הרכב לתחנת הטסט בשעה שבחרת, ומחזיר אותו אליך כשהטסט מאחוריך.",
+svc_wash_t:"שטיפת רכב",svc_wash_p:"שטיפה מבפנים ומבחוץ, עם אותו איסוף והחזרה עד הבית. הרכב חוזר אליך נקי.",
+how_title:"ארבעה צעדים, אפס תורים",how_intro:"מההזמנה ועד שהמפתחות חוזרים אליך, הכול בתוך האפליקציה.",
+s1_t:"מוסיפים את הרכב",s1_p:"יצרן, דגם, שנה ומספר רישוי. פעם אחת, וזהו.",s2_t:"בוחרים שירות ושעה",s2_p:"ומסמנים על המפה בדיוק לאן הנהג יגיע.",s3_t:"הנהג אוסף את הרכב",s3_p:"ואתה רואה כל שלב: בדרך, נאסף, בתחנה, בדרך חזרה.",s4_t:"הרכב חוזר אליך",s4_p:"משלמים באפליקציה ומקבלים קבלה למייל.",
+feat_title:"אתה יודע בדיוק איפה הרכב שלך",feat_intro:"כל הזמנה מראה מה קורה עכשיו, מי הנהג ומה המחיר. בלי לרדוף אחרי אף אחד בטלפון.",
+f1_t:"סטטוס חי בכל הזמנה",f1_p:"עם שם הנהג ומספר הטלפון שלו.",f2_t:"תמונות של הרכב",f2_p:"לפני האיסוף ושוב אחרי השירות.",f3_t:"צ'אט עם המשרד",f3_p:"ורואים מתי ההודעה שלך נקראה.",f4_t:"התראה בכל שלב",f4_p:"ישר לטלפון, בשפה שלך.",f5_t:"מחיר לפני שמזמינים",f5_p:"בשקלים, וההנחות מופעלות אוטומטית.",f6_t:"קבלה על כל תשלום",f6_p:"תשלום מאובטח באפליקציה, וקבלה נשלחת למייל.",
+faq_title:"שאלות נפוצות",q1:"כמה זה עולה?",a1:"המחיר מופיע באפליקציה לפני שמזמינים, לפי השירות והרכב שלך. מבצעים והנחה אישית מופעלים אוטומטית.",
+q2:"באילו אזורים אתם עובדים?",a2:"אנחנו פועלים לפי ערים. כשמסמנים את נקודת האיסוף על המפה, האפליקציה מראה מיד אם היא באזור השירות.",
+q3:"מה צריך להכין לפני האיסוף?",a3:"לפני המסירה מאשרים באפליקציה רשימת בדיקה קצרה: מפתחות ודלק. הנהג מצלם את הרכב כשהוא אוסף אותו.",
+q4:"איך משלמים?",a4:"בתשלום מאובטח בתוך האפליקציה. על כל תשלום נשלחת אליך קבלה למייל.",
+q5:"אפשר לעקוב אחרי הרכב?",a5:"כן. כל שלב מופיע בהזמנה, ומקבלים התראה לטלפון בכל פעם שהסטטוס משתנה.",
+q6:"מה אם לא יהיה אפשר לאסוף את הרכב?",a6:'חשוב לסמן נקודת איסוף מדויקת ולהיות זמין בשעה שבחרת. איסוף שלא התאפשר בגלל פרטים שגויים לא מזוכה. כל הפרטים ב<a href="https://legal.vezgo.app/terms.html">תנאי השימוש</a>.',
+dl_title:"הרכב שלך, נאסף ומוחזר.",dl_intro:"מורידים את Vezgo, מוסיפים את הרכב ומזמינים את הטסט או השטיפה הבאים בשתי דקות.",qr:"סורקים עם המצלמה להורדה",
+ft_tag:"טסט ושטיפת רכב עם איסוף והחזרה עד הבית.",ft_app:"האפליקציה",ft_info:"מידע",ft_privacy:"מדיניות פרטיות",ft_terms:"תנאי שימוש",ft_contact:"יצירת קשר",ft_made:"נבנה בישראל"},
+ar:{dir:"rtl",title:"Vezgo — الفحص السنوي وغسيل السيارة حتى بيتك",skip:"انتقل إلى المحتوى",nav_services:"الخدمات",nav_how:"كيف يعمل",nav_faq:"أسئلة",nav_get:"حمّل التطبيق",
+hero_1:"الفحص السنوي؟",hero_2:"علينا.",hero_lead:"سائق يستلم سيارتك من البيت، يأخذها للفحص أو للغسيل ويعيدها إليك. بدون أن تأخذ نصف يوم إجازة.",hero_note:"التطبيق بالعربية والعبرية والإنجليزية",hero_img_alt:"الشاشة الرئيسية لتطبيق Vezgo",
+svc_title:"ماذا يمكنك أن تحجز",svc_intro:"خدمتان، والفكرة بسيطة: نأتي لنأخذ السيارة، وأنت لا تتحرك من البيت.",
+svc_test_t:"الفحص السنوي",svc_test_p:"السائق يأخذ السيارة إلى محطة الفحص في الموعد الذي اخترته، ويعيدها إليك بعد انتهاء الفحص.",
+svc_wash_t:"غسيل السيارة",svc_wash_p:"غسيل من الداخل والخارج، مع نفس الاستلام والإرجاع حتى البيت. تعود إليك السيارة نظيفة.",
+how_title:"أربع خطوات، بدون طوابير",how_intro:"من الحجز حتى تعود المفاتيح إليك، كل شيء داخل التطبيق.",
+s1_t:"أضف سيارتك",s1_p:"الشركة المصنعة، الطراز، السنة ورقم اللوحة. مرة واحدة فقط.",s2_t:"اختر الخدمة والموعد",s2_p:"وحدد على الخريطة المكان الدقيق الذي سيصل إليه السائق.",s3_t:"السائق يستلم السيارة",s3_p:"وتتابع كل مرحلة: في الطريق، تم الاستلام، في المحطة، في طريق العودة.",s4_t:"سيارتك تعود إليك",s4_p:"ادفع من التطبيق واحصل على إيصال بالبريد الإلكتروني.",
+feat_title:"تعرف دائماً أين سيارتك",feat_intro:"كل طلب يعرض ما يحدث الآن، من هو السائق وما هو السعر. بدون ملاحقة أحد على الهاتف.",
+f1_t:"حالة مباشرة لكل طلب",f1_p:"مع اسم السائق ورقم هاتفه.",f2_t:"صور للسيارة",f2_p:"قبل الاستلام ومرة أخرى بعد الخدمة.",f3_t:"دردشة مع المكتب",f3_p:"وترى متى قُرئت رسالتك.",f4_t:"إشعار في كل مرحلة",f4_p:"مباشرة إلى هاتفك، بلغتك.",f5_t:"السعر قبل الحجز",f5_p:"بالشيكل، والخصومات تُطبّق تلقائياً.",f6_t:"إيصال لكل دفعة",f6_p:"دفع آمن داخل التطبيق، والإيصال يصلك بالبريد.",
+faq_title:"أسئلة شائعة",q1:"كم التكلفة؟",a1:"يظهر السعر في التطبيق قبل الحجز، حسب الخدمة وسيارتك. العروض والخصم الشخصي تُطبّق تلقائياً.",
+q2:"في أي مناطق تعملون؟",a2:"نعمل حسب المدن. عندما تحدد نقطة الاستلام على الخريطة، يُظهر التطبيق فوراً إن كانت ضمن منطقة الخدمة.",
+q3:"ماذا أحضّر قبل الاستلام؟",a3:"قبل التسليم تؤكد في التطبيق قائمة فحص قصيرة: المفاتيح والوقود. السائق يصوّر السيارة عند استلامها.",
+q4:"كيف أدفع؟",a4:"بدفع آمن داخل التطبيق. مع كل دفعة يصلك إيصال بالبريد الإلكتروني.",
+q5:"هل يمكنني متابعة السيارة؟",a5:"نعم. كل مرحلة تظهر في الطلب، ويصلك إشعار على الهاتف كلما تغيّرت الحالة.",
+q6:"ماذا لو تعذّر استلام السيارة؟",a6:'من المهم تحديد نقطة استلام دقيقة وأن تكون متاحاً في الموعد الذي اخترته. الاستلام الذي تعذّر بسبب تفاصيل خاطئة لا يُسترد. كل التفاصيل في <a href="https://legal.vezgo.app/terms.html">شروط الاستخدام</a>.',
+dl_title:"سيارتك، نستلمها ونعيدها.",dl_intro:"حمّل Vezgo، أضف سيارتك واحجز الفحص أو الغسيل القادم خلال دقيقتين.",qr:"امسح بالكاميرا للتحميل",
+ft_tag:"الفحص السنوي وغسيل السيارة مع الاستلام والإرجاع حتى البيت.",ft_app:"التطبيق",ft_info:"معلومات",ft_privacy:"سياسة الخصوصية",ft_terms:"شروط الاستخدام",ft_contact:"تواصل معنا",ft_made:"صُنع في إسرائيل"},
+en:{dir:"ltr",title:"Vezgo — Car test & car wash, collected from your door",skip:"Skip to content",nav_services:"Services",nav_how:"How it works",nav_faq:"FAQ",nav_get:"Get the app",
+hero_1:"Annual car test?",hero_2:"We've got it.",hero_lead:"A driver collects your car from home, takes it for its test or a wash, and brings it back. No half day off work.",hero_note:"The app speaks Hebrew, Arabic and English",hero_img_alt:"The Vezgo app home screen",
+svc_title:"What you can book",svc_intro:"Two services, one simple idea: we come for the car, and you stay home.",
+svc_test_t:"Annual vehicle test",svc_test_p:"The driver takes your car to the test centre at the time you chose, and brings it back once the test is done.",
+svc_wash_t:"Car wash",svc_wash_p:"Inside and out, with the same pickup and return to your door. Your car comes back clean.",
+how_title:"Four steps, no queues",how_intro:"From booking to keys back in your hand, it all happens in the app.",
+s1_t:"Add your car",s1_p:"Make, model, year and plate. Once, and you're done.",s2_t:"Pick a service and a time",s2_p:"Then drop a pin exactly where the driver should come.",s3_t:"The driver collects it",s3_p:"You see every step: on the way, collected, at the centre, on the way back.",s4_t:"Your car comes back",s4_p:"Pay in the app and get a receipt by email.",
+feat_title:"You always know where your car is",feat_intro:"Every order shows what's happening now, who the driver is and what it costs. No chasing anyone on the phone.",
+f1_t:"Live status on every order",f1_p:"With the driver's name and phone number.",f2_t:"Photos of your car",f2_p:"Before pickup and again after the service.",f3_t:"Chat with the office",f3_p:"And see when your message was read.",f4_t:"A notification at each step",f4_p:"Straight to your phone, in your language.",f5_t:"The price before you book",f5_p:"In shekels, with discounts applied automatically.",f6_t:"A receipt for every payment",f6_p:"Secure payment in the app, receipt sent by email.",
+faq_title:"Questions",q1:"How much does it cost?",a1:"You see the price in the app before you book, based on the service and your car. Offers and any personal discount are applied automatically.",
+q2:"Which areas do you cover?",a2:"We work city by city. When you drop the pickup pin on the map, the app tells you straight away whether it's in the service area.",
+q3:"What do I need to prepare?",a3:"Before handover you confirm a short checklist in the app: keys and fuel. The driver photographs the car when collecting it.",
+q4:"How do I pay?",a4:"With secure payment inside the app. You get a receipt by email for every payment.",
+q5:"Can I track my car?",a5:"Yes. Every step shows in the order, and you get a phone notification each time the status changes.",
+q6:"What if the car can't be collected?",a6:'Please drop an accurate pickup pin and be available at the time you chose. A pickup that fails because of wrong details is not refunded. Full details are in the <a href="https://legal.vezgo.app/terms.html">terms of service</a>.',
+dl_title:"Your car, collected and returned.",dl_intro:"Download Vezgo, add your car and book your next test or wash in two minutes.",qr:"Scan with your camera to download",
+ft_tag:"Car test and car wash, collected from and returned to your door.",ft_app:"The app",ft_info:"Info",ft_privacy:"Privacy policy",ft_terms:"Terms of service",ft_contact:"Contact",ft_made:"Made in Israel"}
+};
+const HTML_KEYS=new Set(["a6"]);
+function setLang(l){
+  if(!T[l]) l="he";
+  const d=T[l], root=document.documentElement;
+  root.lang=l; root.dir=d.dir; document.title=d.title;
+  document.querySelectorAll("[data-t]").forEach(el=>{const k=el.dataset.t; if(d[k]==null) return; if(HTML_KEYS.has(k)) el.innerHTML=d[k]; else el.textContent=d[k];});
+  document.querySelectorAll("[data-t-alt]").forEach(el=>{const k=el.dataset.tAlt; if(d[k]) el.alt=d[k];});
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false"));
+  try{localStorage.setItem("vezgo_lang",l)}catch(e){}
+  placeLaneCar();
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{
+  setLang(b.dataset.lang);
+  try{const u=new URL(location.href);u.searchParams.set("lang",b.dataset.lang);history.replaceState(null,"",u)}catch(e){}
+}));
+
+/* header shadow */
+const hdr=document.getElementById("top");
+addEventListener("scroll",()=>{hdr.classList.toggle("scrolled",scrollY>8);placeLaneCar()},{passive:true});
+addEventListener("resize",placeLaneCar);
+
+/* how-it-works: the car drives along the lane as you scroll */
+function placeLaneCar(){
+  const track=document.querySelector(".track"), car=document.querySelector(".lane-car");
+  if(!track||!car||getComputedStyle(car).display==="none") {lightSteps(null);return;}
+  const r=track.getBoundingClientRect(), vh=innerHeight;
+  const p=Math.min(1,Math.max(0,(vh*.78-r.top)/(r.height*.9+vh*.25)));
+  const lis=[...document.querySelectorAll(".steps li")];
+  const rtl=document.documentElement.dir==="rtl";
+  const pins=lis.map(li=>{const b=li.querySelector(".pin").getBoundingClientRect();return b.left+b.width/2-r.left});
+  const a=pins[0], z=pins[pins.length-1];
+  const x=a+(z-a)*p;
+  car.style.transform=`translateX(${x-60}px)`;
+  lightSteps(p);
+}
+function lightSteps(p){
+  const lis=[...document.querySelectorAll(".steps li")];
+  if(p===null){ // mobile: light by position
+    lis.forEach(li=>{const b=li.getBoundingClientRect();li.classList.toggle("on",b.top<innerHeight*.75)});return;
+  }
+  lis.forEach((li,i)=>li.classList.toggle("on",p>=i/(lis.length-1)-0.02));
+}
+
+/* stores: on a phone, put the matching store first */
+(function(){
+  const ua=navigator.userAgent||"";
+  const ios=/iPhone|iPad|iPod/i.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+  const android=/Android/i.test(ua);
+  if(android) document.querySelectorAll(".stores").forEach(s=>{const a=s.querySelector('[data-store="android"]');s.prepend(a)});
+})();
+
+/* initial language: ?lang= → saved → browser → Hebrew */
+(function(){
+  let l=new URLSearchParams(location.search).get("lang");
+  if(!l){try{l=localStorage.getItem("vezgo_lang")}catch(e){}}
+  if(!l){const n=(navigator.language||"he").slice(0,2);l=T[n]?n:"he";}
+  setLang(l);
+})();
+</script>
+</body>
+</html>
